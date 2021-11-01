@@ -17,10 +17,7 @@
   "homepage": "https://github.com/anonymous-development-projects/node-rabbitmq",
   "main": "dist/main.js",
   "typings": "dist/main.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@github.com:anonymous-development-projects/node-rabbitmq.git"
-  },
+  "repository": "git://github.com/anonymous-development-projects/node-rabbitmq.git",
   "publishConfig": {
     "registry":"https://npm.pkg.github.com"
   },
