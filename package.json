@@ -22,7 +22,7 @@
     "url": "ssh://git@github.com:anonymous-development-projects/node-rabbitmq.git"
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "prebuild": "rimraf dist",
