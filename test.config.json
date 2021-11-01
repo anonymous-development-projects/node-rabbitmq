@@ -1,0 +1,67 @@
+{
+  "exchanges": {
+    "exchange.test": {
+      "type": "direct",
+      "delay": false
+    },
+    "exchange.rpc.test": {
+      "type": "direct",
+      "delay": false
+    },
+    "exchange.rpc.test.reply": {
+      "type": "direct",
+      "delay": false
+    },
+    "exchange.test.datahandler": {
+      "type": "direct",
+      "delay": false
+    },
+    "exchange.rpc.reply.test": {
+      "exchange": "exchange.rpc.reply.test",
+      "routing-key": "rpc.reply.test.routing.key"
+    },
+    "exchange.batch": {
+      "exchange": "exchange.batch",
+      "routing-key": "batch.routing.key"
+    }
+  },
+  "queues": {
+    "test": ["test.event"],
+    "test.datahandler": ["test.event.datahandler"],
+    "rpc.test": ["rpc.test.event"],
+    "rpc.test.reply": ["rpc.reply.test.event"],
+    "batch": ["batch.consume"]
+  },
+  "events": {
+    "batch.consume": {
+      "exchange": "exchange.batch",
+      "routing-key": "batch.routing.key"
+    },
+    "test.event": {
+      "exchange": "exchange.test",
+      "routing-key": "test.routing.key"
+    },
+    "test.event.datahandler": {
+      "exchange": "exchange.test.datahandler",
+      "routing-key": "test.datahandler.routing.key"
+    },
+    "rpc.test.event": {
+      "exchange": "exchange.rpc.test",
+      "routing-key": "rpc.test.routing.key"
+    },
+    "rpc.reply.test.event": {
+      "exchange": "exchange.rpc.reply.test",
+      "routing-key": "rpc.reply.test.routing.key"
+    }
+  },
+  "rpc": {
+    "rpc.test": {
+      "exchange": "exchange.rpc.test",
+      "routing-key": "test"
+    },
+    "rpc.test.reply": {
+      "exchange": "exchange.rpc.test.reply",
+      "routing-key": "test_reply"
+    }
+  }
+}

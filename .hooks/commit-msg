@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo "Commit Message Linting"
+# shellcheck disable=SC1090
+source ~/.bash_profile
+
+# shellcheck disable=SC2006
+MESSAGE=`cat "$1"`
+if [[ "$MESSAGE" =~ ([а-яА-Я]+) ]]; then
+    echo "Error: Don't use cyrillic symbols"
+    exit 1
+fi
+
+npx commitlint < "$1"
+
+# shellcheck disable=SC2154
+# shellcheck disable=SC2086
+exit $status

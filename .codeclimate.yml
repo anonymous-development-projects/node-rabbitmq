@@ -1,0 +1,43 @@
+version: "2"
+checks:
+  argument-count:
+    enabled: true
+  complex-logic:
+    enabled: true
+  file-lines:
+    enabled: true
+  identical-code:
+    enabled: true
+  method-complexity:
+    enabled: true
+  method-count:
+    enabled: true
+  method-lines:
+    enabled: true
+  nested-control-flow:
+    enabled: true
+  return-statements:
+    enabled: true
+  similar-code:
+    enabled: true
+plugins:
+  eslint:
+    enabled: true
+    channel: "eslint-7"
+    config:
+      extensions:
+        - .js
+        - .ts
+exclude_patterns:
+  - ".git/"
+  - ".idea/"
+  - ".gitlab/"
+  - ".hooks/"
+  - "config/"
+  - "envs/"
+  - "tests/"
+  - "coverage/"
+  - "dist/"
+  - "build/"
+  - "node_modules/"
+  - "**/*.config.js"

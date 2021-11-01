@@ -1,0 +1,11 @@
+.hooks/
+.codeclimate.yml
+.markdownlintignore
+.markdownlintrc
+.eslintignore
+.eslintrc
+.prettierrc
+.versionrc
+docker-compose.yml
+*.config.js
+Makefile

@@ -1,0 +1,59 @@
+{
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaVersion": 2019,
+    "sourceType": "module"
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:unicorn/recommended",
+    "plugin:node/recommended-module",
+    "plugin:jest/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "airbnb-typescript/base",
+    "plugin:prettier/recommended"
+  ],
+  "settings": {
+    "node": {
+      "tryExtensions": [
+        ".js",
+        ".ts"
+      ]
+    },
+    "jest/expect-expect": [
+      "error",
+      {
+        "assertFunctionNames": ["expect"]
+      }
+    ]
+  },
+  "rules": {
+    // disable unicorn plugin rules
+    "unicorn/no-null": 0,
+    "unicorn/prevent-abbreviations": 0,
+    "unicorn/filename-case": 0,
+    "unicorn/no-array-reduce": 0,
+    "unicorn/no-array-for-each": 0,
+    "unicorn/import-style": 0,
+    "prettier/prettier": "error",
+    "import/prefer-default-export": 0,
+    "import/no-cycle": 0,
+    "node/no-unpublished-import": 0,
+    "class-methods-use-this": 0,
+    "unicorn/no-new-array": 0,
+    "max-classes-per-file": 0,
+    "jest/expect-expect": 0,
+    "no-param-reassign": 0,
+    "unicorn/no-abusive-eslint-disable": 0,
+    "unicorn/prefer-module" : 0,
+    "unicorn/prefer-node-protocol": 0
+  }
+}

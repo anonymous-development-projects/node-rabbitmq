@@ -1,0 +1,16 @@
+# configs
+*.config.js
+webpack.*.js
+envs/
+
+# build
+build/
+public/
+dist/
+
+# reports
+npm_reports/
+coverage/
+
+# hooks
+.hooks/

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "Pre-Commit Linting"
+# shellcheck disable=SC1090
+source ~/.bash_profile
+
+npx lint-staged

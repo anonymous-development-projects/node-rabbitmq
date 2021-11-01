@@ -1,0 +1,17 @@
+version: '3'
+services:
+  node:
+    image: node:14
+    command: sleep infinity
+    working_dir: "/var/www/app"
+    volumes:
+      - "./:/var/www/app"
+  rabbitmq:
+    image: rabbitmq:3.8.14
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    volumes:
+      - "rabbitmq:/var/lib/rabbitmq"
+volumes:
+  rabbitmq: null
